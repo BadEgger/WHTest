@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:baidumap="clr-namespace:Xamarin.Forms.BaiduMaps;assembly=Xamarin.Forms.BaiduMaps"
+             xmlns:gomap ="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+            xmlns:esri="clr-namespace:Esri.ArcGISRuntime.Xamarin.Forms;assembly=Esri.ArcGISRuntime.Xamarin.Forms"
+                      NavigationPage.HasNavigationBar="False"
+             x:Class="Notes.MainPage"
+             Title="基础地图">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="CrossIcon"
+                  x:TypeArguments="ImageSource"
+                  Default="DeleteTable.png" Android="Assets/CrossIcon.png"  WinPhone="Assets/Images/CrossIcon.png" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:Name="MianGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <esri:MapView x:Name="mapView" Grid.RowSpan="2">
+            </esri:MapView>
+            <Image Source="{x:StaticResource CrossIcon}" Grid.RowSpan="2" HeightRequest="50" WidthRequest="50" 
+                                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                   Margin="1,0 ,0,22"></Image>
+            <Label x:Name="Coordinate" TextColor="ForestGreen"/>
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>
