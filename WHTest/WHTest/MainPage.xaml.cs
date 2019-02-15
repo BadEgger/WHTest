@@ -1,7 +1,13 @@
 ﻿using Esri.ArcGISRuntime.Mapping;
+using Esri.ArcGISRuntime.Xamarin.Forms;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using System.IO;
+using System.Linq;
+using Esri.ArcGISRuntime.Geometry;
+using Esri.ArcGISRuntime.Mapping;
+using Esri.ArcGISRuntime.UI;
 
 namespace Notes
 {
@@ -77,6 +83,7 @@ namespace Notes
         {
             try
             {
+                //可以是可以，但是坐标系显示的不同。
                 var centerPoint = mapView.VisibleArea.Extent.GetCenter();
 
                 string x = centerPoint.X.ToString("F6");
