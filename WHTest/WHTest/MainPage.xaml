@@ -10,9 +10,9 @@
             <OnPlatform x:Key="CrossIcon"
                   x:TypeArguments="ImageSource"
                   Default="DeleteTable.png" Android="Assets/CrossIcon.png"  WinPhone="Assets/Images/CrossIcon.png" />
-            <OnPlatform x:Key="location"
+            <!--<OnPlatform x:Key="location"
                   x:TypeArguments="ImageSource"
-                  Default="location.png" Android="Assets/location.png"  WinPhone="Assets/Images/location.png" />
+                  Default="location.png" Android="Assets/location.png"  WinPhone="Assets/Images/location.png" />-->
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -27,11 +27,11 @@
                                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
                                    Margin="1,0 ,0,22"></Image>
             <Label x:Name="Coordinate" TextColor="Red"/>
-            <Image Source="{x:StaticResource location}" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="End" Margin="30">
+            <!--<Image Source="{x:StaticResource location}" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="End" Margin="30">
                 <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding LocationCommand}" CommandParameter="{x:Reference mapView}"></TapGestureRecognizer>
+                    <TapGestureRecognizer Command="{Binding LocationCommand}" ></TapGestureRecognizer>
                 </Image.GestureRecognizers>
-            </Image>
+            </Image>-->
         </Grid>
     </ContentPage.Content>
     
